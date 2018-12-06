@@ -22,7 +22,6 @@ labels = {
 name = input('Name: ')
 request = input('Phone number (p) or address (a)? ')
 
-
 key = request
 if request == 'a':
     key = 'addr'
@@ -30,6 +29,7 @@ if request == 'p':
     key = 'phone'
 
 person = people.get(name, {})
+print('person', person)
 label = labels.get(key, key)
 result = person.get(key, 'not available')
 
